@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Order List</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Order List</h1>
+
+    <!-- Order Table -->
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Total Price</th>
+            <th>Products</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Iterate over orders -->
+        <tr th:each="order : ${orders}">
+            <td th:text="${order.id}"></td>
+            <td th:text="${order.date}"></td>
+            <td th:text="${order.totalPrice}"></td>
+            <td>
+                <ul>
+                    <!-- Iterate over products in each order -->
+                    <li th:each="product : ${order.products}" th:text="${product.name}"></li>
+                </ul>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <!-- Add New Order Form -->
+    <div class="form-container">
+        <h2>Create a New Order</h2>
+        <form th:action="@{/orders/view/add}" method="post">
+            <label for="productNames">Product Names (comma-separated):</label>
+            <input type="text" id="productNames" name="productNames"/>
+
+            <label for="totalPrice">Total Price:</label>
+            <input type="text" id="totalPrice" name="totalPrice"/>
+
+            <button type="submit">Create Order</button>
+        </form>
+    </div>
+
+    <!-- Simple Card -->
+    <div class="card">
+        <h5>Order List Information</h5>
+        <p>This table shows the current orders in the system.</p>
+    </div>
+
+</div>
+
+</body>
+</html>
