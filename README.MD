@@ -80,7 +80,7 @@ Here are the available REST API endpoints for managing orders and products:
   ```json
   {
       "productNames": ["Apple", "Banana"],
-      "totalPrice": 10.00
+      "totalPrice": 1.50
   }
   ```
 
