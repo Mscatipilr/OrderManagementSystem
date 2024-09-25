@@ -2,6 +2,7 @@
 # Order Management System
 
 This project is a simple **Order Management System** built with **Spring Boot**. It allows you to manage orders and products, and supports basic CRUD operations for both. Additionally, products are seeded into the database when the application starts.
+[Jump to Docker Set-Up](# Order Management System - Docker Setup)
 
 ## Features
 
@@ -127,3 +128,21 @@ To run the unit tests, execute the following command:
 ```bash
 mvn test
 ```
+# Order Management System - Docker Setup
+
+## Prerequisites
+
+- Docker installed on your machine
+- (Optional) Docker Compose if you're using multiple services
+
+## Steps to Build and Run the Docker Container
+
+### 1. Build the Docker Image
+
+Run the following command to build the Docker image:
+
+```bash
+docker build -t order-management-system .
+```
+
+Ctrl C to shutdown the system.
