@@ -3,7 +3,7 @@
 
 This project is a simple **Order Management System** built with **Spring Boot**. It allows you to manage orders and products, and supports basic CRUD operations for both. Additionally, products are seeded into the database when the application starts.
 
-[Jump to Docker Set-Up](#order-management-system-docker-setup)
+[Jump to Docker Set-Up](#order-management-system---docker-setup)
 
 ## Features
 
