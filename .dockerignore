@@ -9,8 +9,8 @@ build/
 *.gitignore
 
 # Ignore Dockerfile and docker-compose.yaml in case you use them
-Dockerfile
-docker-compose.yml
+# Dockerfile
+# docker-compose.yml
 
 # Ignore node_modules or any large development directories
 node_modules/
