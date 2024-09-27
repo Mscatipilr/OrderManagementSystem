@@ -145,5 +145,5 @@ Run the following command to build the Docker image:
 ```bash
 docker build -t order-management-system .
 ```
-
-Ctrl C to shutdown the system.
+### 2. Exit
+Ctrl C to shut down the system.

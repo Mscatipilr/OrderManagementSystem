@@ -1,16 +1,22 @@
 version: '3.8'
 services:
   order-management-system:
-    build: .
+    build: .  # Builds from the Dockerfile in the current directory
     ports:
-      - "8080:8080"
+      - "8080:8080"  # Maps port 8080 of the container to port 8080 on the host
     depends_on:
-      - db
+      - db  # The order-management-system service depends on the 'db' service
+
   db:
-    image: postgres:latest
+    image: postgres:latest  # Pulls the latest PostgreSQL image
     environment:
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: admin
-      POSTGRES_DB: order_management
+      POSTGRES_USER: admin  # PostgreSQL username
+      POSTGRES_PASSWORD: admin  # PostgreSQL password
+      POSTGRES_DB: order_management  # PostgreSQL database name
+    volumes:
+      - db-data:/var/lib/postgresql/data  # Mounts the 'db-data' volume to the PostgreSQL data directory
     ports:
-      - "5432:5432"
+      - "5432:5432"  # Exposes PostgreSQL's default port
+
+volumes:
+  db-data:  # Declares the db-data volume
