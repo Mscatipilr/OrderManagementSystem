@@ -36,13 +36,13 @@ To run this project, you need the following installed on your system:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/order-management-system.git
+   git clone https://github.com/Mscatipilr/OrderManagementSystem
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd order-management-system
+   cd OrderManagementSystem
    ```
 
 3. Build the project with Maven:
